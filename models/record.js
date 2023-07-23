@@ -10,6 +10,14 @@ const recordSchema = new Schema({
     type: Date,
     required: true
   },
+  category: {
+    type: String,
+    required: true
+  },
+  category: {
+    typq: Number,
+    required: true
+  },
   amount: {
     type: Number,
     min: 0,
@@ -23,7 +31,8 @@ const recordSchema = new Schema({
   },
   categoryId: {
     type: Schema.Types.ObjectId,
-    ref: 'CategoryId',
+    ref: 'Category',
+    index: true,
     required: true
   }
 })
