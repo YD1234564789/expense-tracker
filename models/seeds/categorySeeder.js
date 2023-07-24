@@ -1,20 +1,40 @@
-const mongoose = require('mongoose')
-// 載入model
-
-const db = mongoose.connection
-
 // 開發環境才用dotenv
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
-// 連線異常
-db.on('error', () => {
-  console.log('mongodb error!')
-})
+const db = require('../../config/mongoose')
+const Category = require('../category')
+const categoryList = [
+  {
+    name: '家居物業',
+    icon: '<i class="fa-solid fa-house"></i>'
+  },
+  {
+    name: '交通出行',
+    icon: '<i class="fa-solid fa-van-shuttle"></i>'
+  },
+  {
+    name: '休閒娛樂',
+    icon: '<i class="fa-solid fa-face-grin-beam"></i>'
+  },
+  {
+    name: '餐飲食品',
+    icon: '<i class="fa-solid fa-utensils"></i>'
+  },
+  {
+    name: '其他',
+    icon: '<i class="fa-solid fa-pen"></i>'
+  },
+]
 
-// 連線成功
 db.once('open', () => {
-  console.log('mongodb connected!')
+  Promise.all(Array.from({ length: categoryList.length }, (_, i) => Category.create({
+    name: categoryList[i].name,
+    icon: categoryList[i].icon
+  })))
+    .then(() => {
+      console.log('categorySeed is created!')
+      process.exit()
+    })
 })

@@ -14,8 +14,8 @@ const recordSchema = new Schema({
     type: String,
     required: true
   },
-  category: {
-    typq: Number,
+  categoryId: {
+    type: String,
     required: true
   },
   amount: {
