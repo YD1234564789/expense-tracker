@@ -9,12 +9,18 @@
     <script src="https://kit.fontawesome.com/72594019ea.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class="navbar navbar-light bg-light">
+  <nav class="navbar navbar-dark bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
         <i class="fa-regular fa-pen-to-square"></i>
-        我的記帳本
+        {{#if isAuthenticated}}{{ user.name }}的{{/if}}
+        記帳本
       </a>
+      {{#if isAuthenticated}}
+        <a href="/users/logout" class="btn btn-outline-light">登出</a>
+        {{else}}
+        <a href="/users/login" class="btn btn-outline-light">登入</a>
+      {{/if}}
     </div>
   </nav>
 

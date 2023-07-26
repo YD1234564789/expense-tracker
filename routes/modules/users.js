@@ -70,7 +70,7 @@ router.post('/login', passport.authenticate('local', {
 router.get('/logout', (req, res) => {
   req.logout()
   req.flash('success_msg', '已成功登出')
-  res.render('/users/login')
+  res.redirect('/users/login')
 })
 
 module.exports = router
