@@ -22,12 +22,12 @@
 2. 開啟終端機，到欲存放專案的路徑下，將專案 clone 到本地，輸入：
 
    ```bash
-   git clone https://github.com/YD1234564789/expense*tracker.git
+   git clone https://github.com/YD1234564789/expense-tracker.git
    ```
 3. 開啟終端機，到欲存放專案的路徑下，將專案 clone 到本地，輸入：
 
    ```bash
-   cd expense*tracker
+   cd expense-tracker
    ```
    
 4. 安裝相關套件，輸入：
@@ -39,7 +39,7 @@
 5. 安裝 nodemon 
 
    ```bash
-   npm i *g nodemon
+   npm i -g nodemon
    ```
 
 6. 根據 .env.example 設定環境變數，新增 .env 檔案，檔案中輸入：
