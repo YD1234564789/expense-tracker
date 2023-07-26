@@ -1,6 +1,16 @@
 # Expense-Tracker
-
-
+![index](https://github.com/YD1234564789/expense-tracker/assets/67455167/e7aa9192-0e56-4b2b-ba5a-4d7d7937f6ab)
+* 總覽所有資出與總金額
+---
+![login](https://github.com/YD1234564789/expense-tracker/assets/67455167/6c0933d6-7b03-4764-a6d5-b0dcef1f2992)
+* 可用email或facebook登入
+---
+![new](https://github.com/YD1234564789/expense-tracker/assets/67455167/5ef6b61e-d077-4815-b2bb-1aecd0242dba)
+* 新增一筆支出
+---
+![filter](https://github.com/YD1234564789/expense-tracker/assets/67455167/edc8a41e-b4f3-4550-8c1f-fcae74cd19a6)
+* 篩選類別
+---
 
 ## 介紹
 
